@@ -24,4 +24,23 @@ main p {
     font-size: 35px
 }
 
+#startQuiz {
+    border: 5px solid;
+    border-color: black;
+    border-radius: 10px;
+    
+    font-size: 45px;
+    color: white;
+    background-color: purple;
+    width: 400px;
+    height: 100px
+}
 
+
+.show {
+
+}
+
+.hide {
+    display: none;
+}
