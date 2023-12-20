@@ -7,6 +7,8 @@ var questionsEl = document.getElementById('questions-and-answers');
 var answersEl = document.getElementById('answerButtons');
 var finalEl = document.getElementById('final');
 var finalscoreEl = document.getElementById('final-score');
+var initialsEl = document.getElementById('initials');
+var submitButton = document.getElementById('submit-button');
 
 //variables
 //object array for questions, answers abd correct answer
@@ -151,7 +153,27 @@ function endQuiz() {
     finalscoreEl.textContent = finalScore;
 }
 
+function save() {
+    //variable to store the input initials
+    var input = initialsEl.value.trim();
+
+    var scoreObject = {
+        score: time,
+        initials: input,
+    };
+
+    /*creating a variable to get any highscores out of local storage and turn it into a javascript object
+    or if there is nothing in local sotrage create an empty array to have things stored in from scratch ie: the first set of
+    scores and initials*/
+    var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    //puses the score object into the highScores array
+    highScores.push(scoreObject);
+    /*creates the highScores key and turns the array into a string for local storage
+    can be turned back into the object array via JSON.parse*/
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+}
 
 
 startButton.addEventListener("click", startQuiz);
 answersEl.addEventListener("click", check);
+submitButton.addEventListener("click", save);
