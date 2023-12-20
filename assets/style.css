@@ -33,7 +33,9 @@ main p {
     color: white;
     background-color: purple;
     width: 400px;
-    height: 100px
+    height: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 
@@ -49,6 +51,17 @@ main p {
     text-align: center;
 }
 
+#h2-score {
+    font-size: 55px;
+}
+/* font size for text before input field*/
+#high-score {
+    font-size: 30px;
+}
+/*font size for input field so that box doesnt look to small next to the preceding text*/
+#initials {
+    font-size: 30px; 
+}
 
 
 #button {
@@ -58,6 +71,33 @@ main p {
     color: white;
     background-color: purple;
     width: 300px;
-    height: 60px
-    
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+#submit-button {
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+    background-color: purple;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*hover effect for quiz buttons and start button */
+#button:hover {
+    background-color: fuchsia;
+}
+
+#startQuiz:hover {
+    background-color: fuchsia;
+}
+
+#submit-button:hover {
+    background-color: fuchsia;
 }

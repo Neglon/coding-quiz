@@ -5,6 +5,8 @@ var timerEL = document.getElementById('timer');
 var questionsEl = document.getElementById('questions-and-answers');
 //moved answersEl to the global scope for the eventListener
 var answersEl = document.getElementById('answerButtons');
+var finalEl = document.getElementById('final');
+var finalscoreEl = document.getElementById('final-score');
 
 //variables
 //object array for questions, answers abd correct answer
@@ -101,6 +103,8 @@ function check(event){
     console.log(checkAnswer.value);
     if (checkAnswer.value !== questions[questionsIndex].correct) {
         time = time - 15;
+        //added this to make sure the time is propely updated when a question is wrong and the quiz also ends
+        timerEL.textContent = time;
     }
     console.log(checkAnswer.value);
     //if correct increase index by one to cylce to next questions set
@@ -135,8 +139,16 @@ function timer() {
 
 //funtion to end the quiz
 function endQuiz() {
+    //variable to hold final score
+    var finalScore = time;
+    //stops the timer
     clearInterval(timeInterval);
+    //hides the questions and answers section
+    questionsEl.setAttribute('class', 'hide');
 
+    //shows the final score section
+    finalEl.removeAttribute('class');
+    finalscoreEl.textContent = finalScore;
 }
 
 
