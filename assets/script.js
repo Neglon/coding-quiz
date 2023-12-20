@@ -171,6 +171,9 @@ function save() {
     /*creates the highScores key and turns the array into a string for local storage
     can be turned back into the object array via JSON.parse*/
     localStorage.setItem('highScores', JSON.stringify(highScores));
+
+    //opens the browser to the scores page
+    location.href = 'scores.html';
 }
 
 
