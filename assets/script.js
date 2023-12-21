@@ -9,6 +9,7 @@ var finalEl = document.getElementById('final');
 var finalscoreEl = document.getElementById('final-score');
 var initialsEl = document.getElementById('initials');
 var submitButton = document.getElementById('submit-button');
+var infoEl= document.getElementById('correct-wrong');
 
 //variables
 //object array for questions, answers abd correct answer
@@ -107,10 +108,20 @@ function check(event){
         time = time - 15;
         //added this to make sure the time is propely updated when a question is wrong and the quiz also ends
         timerEL.textContent = time;
-    }
-    console.log(checkAnswer.value);
-    //if correct increase index by one to cylce to next questions set
-    questionsIndex++
+        infoEl.removeAttribute('class');
+        infoEl.textContent = "Wrong";
+
+    } else {
+        console.log(checkAnswer.value);
+        
+        infoEl.removeAttribute('class');
+        infoEl.textContent = "Correct";
+        }
+        //if correct increase index by one to cylce to next questions set
+        questionsIndex++
+    setTimeout(function() {
+        infoEl.setAttribute('class', 'hide');
+    }, 1000);
 
     /*if/else statement if time is 0 or the index variable is equal to the length of the 
     questions array meaning no more questions to ask it ends the quiz, otherwise it runs the function

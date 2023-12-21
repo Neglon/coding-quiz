@@ -1,11 +1,12 @@
 # <Code-Quiz>
 
 ## Description
+
     
 
 ## Installation
     Web Page is in the link below
-[Code Quiz](https://neglon.github.io/code-quiz)
+[Code Quiz](https://neglon.github.io/codeing-quiz)
 
 ## Usage
     Upon visiting the page, you have a button to start the quiz or a link in the top left to go to the high scores.
@@ -16,11 +17,11 @@
     and an area to input you initials to log you highscore. 
     You will then be re-directed to another page where the high scores are displayed
    
-![Screenshots of start screen](#)
+![Screenshots of start screen](assets/intro.PNG)
    
-![Screenshots of a quiz running](#)
+![Screenshots of a quiz running](assets/quiz.PNG)
 
-![Screenshot of High Score Page](#)
+![Screenshot of High Score Page](assets/highScores.PNG)
    
 
 ## Credits
