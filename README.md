@@ -1,7 +1,13 @@
 # <Code-Quiz>
 
 ## Description
-
+    - A client requested a website that could be used as study tool, in the form of a multiple choice quiz. They also wanted to be able to save those scores along with the users input initials into local storage, and to have the list of high scores displayed.
+    - This project was built to allow users to challenge their knowledge about coding, in a mutliple question, timed multiple choice quiz,
+    that keeps track of their score.
+    - This project was able to solve the displaying of the quiz, their repspective clickable options, and cycle through all of the question all while a timer  is counting down on screen. It also solves how to store the score and input intitals into a local storage array which is then sorted and displayed from highest score to lowest.
+    - I learned how to traverse the DOM to manipulate class, and id's along with creating new elements that are not in the html at the start
+    I learned how to use functions that can update displayed information via a delay of my choosing. I learned that in many cases its necessary for
+    additional .js files for different .html files. I learned how to sort arrays based on information inside the array. I learned how to store information to local storage and also how to retrieve that information to be able to display that on the page.
     
 
 ## Installation

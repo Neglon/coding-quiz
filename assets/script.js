@@ -127,7 +127,8 @@ function check(event){
     questions array meaning no more questions to ask it ends the quiz, otherwise it runs the function
     to show the questions again, moving to the next question*/
     if (time <= 0 || questionsIndex === questions.length) {
-        endQuiz();
+        //set a time out so that the user can see if they are correct or not on the last question
+        setTimeout(endQuiz, 1000);
     } else {
         showQuestions();
     }
@@ -156,12 +157,14 @@ function endQuiz() {
     var finalScore = time;
     //stops the timer
     clearInterval(timeInterval);
-    //hides the questions and answers section
-    questionsEl.setAttribute('class', 'hide');
+    
 
     //shows the final score section
     finalEl.removeAttribute('class');
     finalscoreEl.textContent = finalScore;
+
+    //hides the questions and answers section
+    questionsEl.setAttribute('class', 'hide');
 }
 
 function save() {
